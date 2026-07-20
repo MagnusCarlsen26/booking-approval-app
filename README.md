@@ -3,6 +3,19 @@
 A small booking-approval app with two roles — **Renter** and **Admin** — built with
 Next.js (App Router) + TypeScript and Supabase (Auth + Postgres + Row Level Security).
 
+**Live app:** https://booking-approval-app.vercel.app
+
+### Demo accounts (email auto-confirm is on, so you can also just sign up)
+
+| Role   | Email                    | Password      |
+| ------ | ------------------------ | ------------- |
+| Admin  | admin.demo@example.com   | demopass123   |
+| Renter | renter.demo@example.com  | demopass123   |
+
+You can also sign up a fresh account (always created as a **renter**) and, if you want a
+second admin, promote it with `supabase/seed-admin.sql`.
+
+
 - Renters submit booking requests (date, time, note) and track their status.
 - Admins review every request and can **Accept**, **Reject**, or **Ask for clarification**.
 - The booking status flows through a strict state machine that is enforced in the
